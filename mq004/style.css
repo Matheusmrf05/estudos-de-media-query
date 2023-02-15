@@ -1,0 +1,72 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Site para aparelhos com mais de 250px*/
+
+@media screen and (min-width:250px){
+    header{
+        background-image: linear-gradient(to right , blue, red , blue);
+    }
+   header h1 {
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+    }
+     header p{
+        text-indent: 20px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 1em;
+        color: white;
+        line-height: 2em;
+    }
+    menu{
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-size:10.4px ;
+ 
+    }
+
+    menu ul li{
+        display: inline-block;
+        padding: 10px;
+        transition: 1s;
+        border-radius: 10px;
+    }
+    menu ul li:hover{
+        background-color: crimson;
+        color: black;
+    }
+}
+
+@media screen and (min-width:375px){
+    header h1{
+        font-size: 35px;
+        font-variant: small-caps;
+    }
+    header p{
+        font-size: 20px;
+        line-height: 2em;
+    }
+    menu {
+        font-size: 18px; 
+        display: flex; 
+        justify-content: end;  
+    } 
+    
+    menu ul li{
+        border-radius: 10px;  
+        transition-duration: 1s; 
+        padding: 10px;
+    }
+    menu ul li:hover{
+        background-color:crimson;
+        color:black;
+        
+    }
+
+}
+  
