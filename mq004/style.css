@@ -3,70 +3,134 @@
     margin: 0px;
 }
 
-/*Site para aparelhos com mais de 250px*/
 
-@media screen and (min-width:250px){
-    header{
-        background-image: linear-gradient(to right , blue, red , blue);
-    }
-   header h1 {
-        text-align: center;
-        font-size: 20px;
-        padding: 20px;
-    }
-     header p{
-        text-indent: 20px;
-        padding: 20px;
-        text-align: justify;
-        font-size: 1em;
-        color: white;
-        line-height: 2em;
-    }
-    menu{
-        padding: 10px;
-        color: white;
-        text-align: center;
-        font-size:10.4px ;
- 
-    }
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
 
-    menu ul li{
-        display: inline-block;
-        padding: 10px;
-        transition: 1s;
-        border-radius: 10px;
+main h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+main {
+     background-color: rgba(255, 255, 255, 0.719);
+     margin: 20px 20px 0px 20px;
+     border-radius:10px;
+
+}
+
+main p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/*versão para impressora*/
+
+@media print {
+
+    body{
+        background-image: url(imagens/back-print.jpg);
     }
-    menu ul li:hover{
-        background-color: crimson;
+    main h1{
         color: black;
-    }
-}
-
-@media screen and (min-width:375px){
-    header h1{
-        font-size: 35px;
-        font-variant: small-caps;
-    }
-    header p{
+        text-align: center;
         font-size: 20px;
-        line-height: 2em;
+        text-shadow: none;
     }
-    menu {
-        font-size: 18px; 
-        display: flex; 
-        justify-content: end;  
-    } 
-    
-    menu ul li{
-        border-radius: 10px;  
-        transition-duration: 1s; 
-        padding: 10px;
-    }
-    menu ul li:hover{
-        background-color:crimson;
-        color:black;
-        
+    main::after{
+        content: 'Esse design foi feito por Matheus Rodrigues Firmino';
     }
 
+    main img {
+        margin: auto;
+    }
+    p{
+        display: none;
+    }
+    img.phone{display: none;}
+    img.tablet{display: none;}
+    img.pc{display: none;}
+    img.print{display: block;}
+    img.tv{display: none;}
 }
-  
+@media screen and (max-width:600px){
+    body {
+        background-color: darkblue;
+    }
+    img.phone{display: none;}
+    img.tablet{display: none;}
+    img.pc{display: none;}
+    img.print{display: none;}
+    img.tv{display: none;}
+}
+
+@media screen and (min-width:600px) and (max-width:767px){
+    body {
+        background-image: url(imagens/back-phone.jpg);
+    }
+    main img{
+        margin: auto;
+    }
+    img.phone{display: block;}
+    img.tablet{display: none;}
+    img.pc{display: none;}
+    img.print{display: none;}
+    img.tv{display: none;}
+
+    p{display: none;}
+}   
+
+@media screen and (min-width: 768px) and (max-width:992px){
+    body {
+        background-image: url(imagens/back-tablet.jpg);
+    }
+    main img {
+        margin: auto;
+    }
+    img.phone{display: none;}
+    img.tablet{display: block;}
+    img.pc{display: none;}
+    img.print{display: none;}
+    img.tv{display: none;}
+
+    p{display: none;}
+}
+
+@media screen and (min-width:993px) and (max-width:1200px){
+    body {
+        background-image: url(imagens/back-pc.jpg);
+        background-position: center center;
+    }
+    main img {
+        margin: auto;
+    }
+    img.phone{display: none;}
+    img.tablet{display: none;}
+    img.pc{display: block;}
+    img.print{display: none;}
+    img.tv{display: none;}
+    
+    p{
+        display: none;
+    }
+}
+
+@media screen and (min-width:1201px){
+    body {
+        background-image: url(imagens/back-tv.jpg);
+    }
+    main img {
+        margin: auto;
+    }
+    img.phone{display: none;}
+    img.tablet{display: none;}
+    img.pc{display: none;}
+    img.print{display: none;}
+    img.tv{display: block;}
+
+    p{
+        display: none;
+    }
+}
